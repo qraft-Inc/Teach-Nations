@@ -15,8 +15,10 @@ body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;margin:0;background:v
 .hero{padding:4rem 0;color:#fff;background:linear-gradient(120deg,#0b5fff 0%,#0b83ff 60%)}
 .hero h2{margin:0 0 0.5rem;font-size:1.9rem}
 .btn{display:inline-block;padding:0.6rem 1rem;border-radius:6px;background:transparent;border:1px solid rgba(0,0,0,0.08);text-decoration:none;color:var(--accent);font-weight:600}
+.cta-row{display:inline-flex;gap:0.75rem;align-items:center}
+/* Make secondary buttons visible on dark hero backgrounds */
+.hero .btn{color:#fff;border-color:rgba(255,255,255,0.18);background:rgba(255,255,255,0.06)}
 .btn.primary{background:#fff;color:var(--accent);box-shadow:0 6px 18px rgba(11,95,255,0.12)}
-.main .card{}
 .card{background:var(--card);padding:1.25rem;border-radius:10px;margin-bottom:1rem;box-shadow:0 6px 20px rgba(2,6,23,0.06)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
 .course h4{margin:0 0 .5rem}
