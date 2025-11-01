@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TEN Fund — Teach Nations</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <h1 class="logo">TEN Fund</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bible-school-on-wheels.html">BSOW</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="container" role="main">
+    <section class="card">
+      <h2>TEN Fund — Sponsor a Child</h2>
+      <p>The TEN Fund is a student-led initiative to sponsor 100 children in school each term with a contribution of UGX 100,000 per child. Your gift helps provide school fees, supplies and hope.</p>
+      <h3>How to contribute</h3>
+      <p>For now we provide two options:</p>
+      <ol>
+        <li>Configure a payment provider (Stripe / Paystack / Flutterwave) and replace the button below with a secure checkout link.</li>
+        <li>Or provide bank transfer details to process offline donations (we can add those here).</li>
+      </ol>
+      <p class="fund-note">Donate safely using Flexipay (placeholder). Click the button to start checkout. This will call a serverless endpoint that creates a Flexipay checkout session and returns a checkout URL.</p>
+      <p><a id="donateBtn" class="donation-cta" href="#">Donate UGX 100,000</a></p>
+      <script>
+        // The client-side flow: POST to the serverless function to create a Flexipay session.
+        document.getElementById('donateBtn').addEventListener('click', async function (e) {
+          e.preventDefault();
+          const btn = e.currentTarget;
+          btn.textContent = 'Processing…';
+          try {
+            const res = await fetch('/.netlify/functions/create-flexipay-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ amount: 100000 })
+            });
+            const data = await res.json();
+            if (res.ok && data.url) {
+              // Open the payment page in a new tab
+              window.open(data.url, '_blank', 'noopener');
+              btn.textContent = 'Donate UGX 100,000';
+            } else {
+              console.error('Payment create error', data);
+              alert('Could not create payment session. See console for details.');
+              btn.textContent = 'Donate UGX 100,000';
+            }
+          } catch (err) {
+            console.error(err);
+            alert('Network error while contacting payment server.');
+            btn.textContent = 'Donate UGX 100,000';
+          }
+        });
+      </script>
+      <h3>Student leadership</h3>
+      <p>This program is led by Teach Nations students and managed through our finance office. I can scaffold a simple serverless endpoint to create signed Stripe Checkout sessions if you want — let me know which provider you prefer.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Teach Nations</p>
+    </div>
+  </footer>
+</body>
+</html>

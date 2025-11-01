@@ -1,0 +1,7 @@
+{
+  "issuer": "https://your-moodle.example.com",
+  "client_id": "replace-with-client-id",
+  "deployment_id": "replace-with-deployment-id",
+  "auth_token_url": "https://your-moodle.example.com/mod/lti/auth.php",
+  "redirect_uris": ["https://your-site.example.com/lti/launch"]
+}
