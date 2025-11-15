@@ -28,44 +28,27 @@
       <h2>TEN Fund — Sponsor a Child</h2>
       <p>The TEN Fund is a student-led initiative to sponsor 100 children in school each term with a contribution of UGX 100,000 per child. Your gift helps provide school fees, supplies and hope.</p>
       <h3>How to contribute</h3>
-      <p>For now we provide two options:</p>
-      <ol>
-        <li>Configure a payment provider (Stripe / Paystack / Flutterwave) and replace the button below with a secure checkout link.</li>
-        <li>Or provide bank transfer details to process offline donations (we can add those here).</li>
-      </ol>
-      <p class="fund-note">Donate safely using Flexipay (placeholder). Click the button to start checkout. This will call a serverless endpoint that creates a Flexipay checkout session and returns a checkout URL.</p>
-      <p><a id="donateBtn" class="donation-cta" href="#">Donate UGX 100,000</a></p>
-      <script>
-        // The client-side flow: POST to the serverless function to create a Flexipay session.
-        document.getElementById('donateBtn').addEventListener('click', async function (e) {
-          e.preventDefault();
-          const btn = e.currentTarget;
-          btn.textContent = 'Processing…';
-          try {
-            const res = await fetch('/.netlify/functions/create-flexipay-session', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ amount: 100000 })
-            });
-            const data = await res.json();
-            if (res.ok && data.url) {
-              // Open the payment page in a new tab
-              window.open(data.url, '_blank', 'noopener');
-              btn.textContent = 'Donate UGX 100,000';
-            } else {
-              console.error('Payment create error', data);
-              alert('Could not create payment session. See console for details.');
-              btn.textContent = 'Donate UGX 100,000';
-            }
-          } catch (err) {
-            console.error(err);
-            alert('Network error while contacting payment server.');
-            btn.textContent = 'Donate UGX 100,000';
-          }
-        });
-      </script>
+      <p>You can donate UGX 100,000 to sponsor a child through MTN Mobile Money:</p>
+      
+      <div class="fund-note" style="margin-bottom:1.5rem">
+        <strong>Option 1: Quick Dial</strong>
+        <p>Click the button below to dial directly and get the merchant code:</p>
+        <p><a id="donateBtn" class="donation-cta" href="tel:*291%23">Dial *291# to Donate</a></p>
+      </div>
+
+      <div class="fund-note">
+        <strong>Option 2: Manual Steps</strong>
+        <ol style="margin:0.5rem 0 0 1.25rem">
+          <li>Dial <strong>*291#</strong> on your phone</li>
+          <li>Select option <strong>3</strong> (Pay Merchant)</li>
+          <li>Enter merchant code: <strong>288475</strong> (Teach Nations)</li>
+          <li>Enter amount: <strong>100000</strong></li>
+          <li>Confirm the payment</li>
+        </ol>
+      </div>
+
       <h3>Student leadership</h3>
-      <p>This program is led by Teach Nations students and managed through our finance office. I can scaffold a simple serverless endpoint to create signed Stripe Checkout sessions if you want — let me know which provider you prefer.</p>
+      <p>This program is led by Teach Nations students and managed through our finance office. Every contribution goes directly to sponsoring children in need of educational support.</p>
     </section>
   </main>
   <footer class="site-footer">
