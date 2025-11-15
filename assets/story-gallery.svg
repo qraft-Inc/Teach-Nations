@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="100%" height="100%" fill="#f0f8ff"/>
+  <rect x="50" y="50" width="300" height="200" rx="8" fill="#0b5fff" opacity="0.1"/>
+  <rect x="400" y="50" width="350" height="200" rx="8" fill="#0b5fff" opacity="0.15"/>
+  <rect x="50" y="300" width="350" height="250" rx="8" fill="#0b5fff" opacity="0.12"/>
+  <rect x="450" y="300" width="300" height="250" rx="8" fill="#0b5fff" opacity="0.08"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#0b5fff" font-family="Arial, Helvetica, sans-serif" font-size="22">Story gallery placeholder</text>
+</svg>
