@@ -118,5 +118,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-console.log('Teach Nations site loaded');
+console.log('TEN - Uganda site loaded');
 
