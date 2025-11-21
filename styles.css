@@ -62,6 +62,8 @@ section h3{margin-top:0;margin-bottom:1.5rem;font-size:2rem;font-weight:700;colo
 #ten-fund{background:linear-gradient(135deg,#fff8e6 0%,#ffffff 100%);border-left:4px solid var(--accent)}
 #team .team-card{transition:transform 0.3s ease,box-shadow 0.3s ease}
 #team .team-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(2,6,23,0.15)}
+.intake-highlight{background:linear-gradient(135deg,#fff8e6 0%,#fffef9 100%);border:2px solid var(--accent);box-shadow:0 4px 20px rgba(11,95,255,0.15)}
+.intake-highlight h2,.intake-highlight h3{color:var(--accent)}
 .contact a{color:var(--accent)}
 .site-footer{padding:1.25rem 0;text-align:center;color:var(--muted)}
 .iframe-wrap{position:relative;width:100%;padding-bottom:120%;height:0;overflow:hidden;border-radius:8px}
