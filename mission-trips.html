@@ -24,13 +24,15 @@
   
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Mission Trips Specific Styles */
+    /* Mission Trips Specific Styles - Mobile First */
+    
+    /* Base Mobile Styles */
     .mission-hero {
       position: relative;
-      height: 70vh;
-      min-height: 500px;
+      min-height: 400px;
+      height: 60vh;
       background: linear-gradient(rgba(11,95,255,0.75),rgba(11,131,255,0.75)), 
-                  url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1600') center/cover;
+                  url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=800') center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -40,21 +42,23 @@
     }
     
     .mission-hero-content {
-      max-width: 800px;
-      padding: 2rem;
+      max-width: 100%;
+      padding: 1rem;
       animation: fadeInUp 1s ease-out;
     }
     
     .mission-hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      line-height: 1.2;
     }
     
     .mission-hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      line-height: 1.5;
     }
     
     @keyframes fadeInUp {
@@ -68,16 +72,17 @@
       }
     }
     
+    /* Grids - Mobile First (single column) */
     .partnerships-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       margin-top: 2rem;
     }
     
     .partner-card {
       background: #fff;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
       text-align: center;
@@ -90,37 +95,38 @@
     }
     
     .partner-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
       color: var(--primary);
     }
     
     .segments-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
       margin-top: 2rem;
     }
     
     .segment-item {
       background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 8px;
       border-left: 4px solid var(--primary);
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
     }
     
     .segment-icon {
-      font-size: 2rem;
+      font-size: 1.75rem;
       color: var(--primary);
+      flex-shrink: 0;
     }
     
     .value-props-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       margin-top: 2rem;
     }
     
@@ -133,36 +139,37 @@
     }
     
     .value-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
     
     .value-card-image {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
     }
     
     .value-card-content {
-      padding: 1.5rem;
+      padding: 1.25rem;
     }
     
     .value-card h4 {
       color: var(--primary);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
     }
     
     .pricing-table {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
       margin-top: 2rem;
     }
     
     .pricing-card {
       background: #fff;
       border-radius: 12px;
-      padding: 2rem;
+      padding: 1.5rem;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       text-align: center;
       transition: transform 0.3s ease;
@@ -170,14 +177,14 @@
     }
     
     .pricing-card:hover {
-      transform: scale(1.05);
+      transform: scale(1.02);
       border-color: var(--primary);
     }
     
     .pricing-card.featured {
       background: linear-gradient(135deg, #0b5fff 0%, #0b83ff 100%);
       color: white;
-      transform: scale(1.05);
+      transform: none;
     }
     
     .pricing-card.featured h4,
@@ -187,27 +194,28 @@
     
     .pricing-card h4 {
       color: var(--primary);
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
     }
     
     .price {
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       font-weight: 700;
       color: var(--primary);
-      margin: 1rem 0;
+      margin: 0.75rem 0;
     }
     
     .pricing-features {
       list-style: none;
       padding: 0;
-      margin: 1.5rem 0;
+      margin: 1rem 0;
       text-align: left;
     }
     
     .pricing-features li {
       padding: 0.5rem 0;
       border-bottom: 1px solid rgba(0,0,0,0.1);
+      font-size: 0.95rem;
     }
     
     .pricing-card.featured .pricing-features li {
@@ -229,33 +237,35 @@
       background: linear-gradient(135deg, #0b5fff 0%, #0b83ff 100%);
       color: white;
       text-align: center;
-      padding: 4rem 2rem;
-      margin: 3rem 0;
+      padding: 2.5rem 1.5rem;
+      margin: 2rem 0;
       border-radius: 12px;
     }
     
     .cta-section h3 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
     }
     
     .cta-section p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
       opacity: 0.95;
+      line-height: 1.6;
     }
     
     .contact-form {
-      max-width: 600px;
+      max-width: 100%;
       margin: 2rem auto;
       background: #fff;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     
     .form-group {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
     
     .form-group label {
@@ -263,6 +273,7 @@
       margin-bottom: 0.5rem;
       font-weight: 600;
       color: var(--text);
+      font-size: 0.95rem;
     }
     
     .form-group input,
@@ -285,7 +296,7 @@
     
     .form-group textarea {
       resize: vertical;
-      min-height: 120px;
+      min-height: 100px;
     }
     
     .form-message {
@@ -293,6 +304,7 @@
       border-radius: 6px;
       margin-bottom: 1rem;
       display: none;
+      font-size: 0.95rem;
     }
     
     .form-message.success {
@@ -314,7 +326,7 @@
       color: white;
       border: none;
       border-radius: 6px;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease;
@@ -331,42 +343,246 @@
     
     .impact-stats {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-      margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
       text-align: center;
     }
     
     .stat-item {
-      padding: 2rem;
+      padding: 1.5rem 1rem;
       background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
       border-radius: 8px;
     }
     
     .stat-number {
-      font-size: 3rem;
+      font-size: 2rem;
       font-weight: 700;
       color: var(--primary);
       display: block;
     }
     
     .stat-label {
-      font-size: 1rem;
+      font-size: 0.85rem;
       color: var(--text);
       margin-top: 0.5rem;
+      line-height: 1.3;
     }
     
-    @media (max-width: 768px) {
+    /* Tablet and up (min-width: 600px) */
+    @media (min-width: 600px) {
+      .mission-hero {
+        height: 65vh;
+        min-height: 450px;
+      }
+      
+      .mission-hero-content {
+        padding: 1.5rem;
+      }
+      
       .mission-hero h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
       }
       
       .mission-hero p {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
+      }
+      
+      .segments-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+      }
+      
+      .pricing-table {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .impact-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .stat-label {
+        font-size: 0.9rem;
+      }
+      
+      .cta-section {
+        padding: 3rem 2rem;
       }
       
       .cta-section h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+      }
+      
+      .cta-section p {
+        font-size: 1.1rem;
+      }
+      
+      .contact-form {
+        padding: 2rem;
+      }
+    }
+    
+    /* Desktop (min-width: 900px) */
+    @media (min-width: 900px) {
+      .mission-hero {
+        height: 70vh;
+        min-height: 500px;
+        background-image: linear-gradient(rgba(11,95,255,0.75),rgba(11,131,255,0.75)), 
+                          url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=1600');
+      }
+      
+      .mission-hero-content {
+        max-width: 800px;
+        padding: 2rem;
+      }
+      
+      .mission-hero h1 {
+        font-size: 3rem;
+      }
+      
+      .mission-hero p {
+        font-size: 1.3rem;
+      }
+      
+      .partnerships-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+      .partner-card {
+        padding: 2rem;
+      }
+      
+      .partner-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      
+      .segments-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+      }
+      
+      .segment-item {
+        padding: 1.5rem;
+        gap: 1rem;
+      }
+      
+      .segment-icon {
+        font-size: 2rem;
+      }
+      
+      .value-props-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      
+      .value-card-image {
+        height: 200px;
+      }
+      
+      .value-card-content {
+        padding: 1.5rem;
+      }
+      
+      .value-card h4 {
+        font-size: 1.25rem;
+      }
+      
+      .value-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      }
+      
+      .pricing-table {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+      
+      .pricing-card {
+        padding: 2rem;
+      }
+      
+      .pricing-card:hover {
+        transform: scale(1.05);
+      }
+      
+      .pricing-card.featured {
+        transform: scale(1.05);
+      }
+      
+      .pricing-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .price {
+        font-size: 2.5rem;
+        margin: 1rem 0;
+      }
+      
+      .pricing-features {
+        margin: 1.5rem 0;
+      }
+      
+      .pricing-features li {
+        font-size: 1rem;
+      }
+      
+      .cta-section {
+        padding: 4rem 2rem;
+        margin: 3rem 0;
+      }
+      
+      .cta-section h3 {
+        font-size: 2.5rem;
+      }
+      
+      .cta-section p {
+        font-size: 1.2rem;
+      }
+      
+      .contact-form {
+        max-width: 600px;
+      }
+      
+      .form-group textarea {
+        min-height: 120px;
+      }
+      
+      .btn-submit {
+        font-size: 1.1rem;
+      }
+      
+      .impact-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+      
+      .stat-item {
+        padding: 2rem;
+      }
+      
+      .stat-number {
+        font-size: 3rem;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+      }
+    }
+    
+    /* Large Desktop (min-width: 1200px) */
+    @media (min-width: 1200px) {
+      .partnerships-grid,
+      .value-props-grid {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   </style>
@@ -405,7 +621,7 @@
       <h1>TEN Mission Trips to Uganda</h1>
       <p>Transformative spiritual journeys combining faith, cultural immersion, and wildlife adventures in the Pearl of Africa</p>
       <div class="cta-row">
-        <a class="btn primary" href="#contact-form">Join a Mission Trip</a>
+        <a class="btn primary" href="https://wa.me/256702238158?text=Hello!%20I'm%20interested%20in%20TEN%20Mission%20Trips%20to%20Uganda." target="_blank" rel="noopener noreferrer">Join a Mission Trip</a>
         <a class="btn" href="#value-propositions">Explore Experiences</a>
       </div>
     </div>
@@ -543,7 +759,7 @@
         </div>
         
         <div class="value-card">
-          <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=600" alt="Uganda Martyrs Sites" class="value-card-image" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1769344420/Namugongo-Shrine_dn4bvu.jpg" alt="Uganda Martyrs Sites" class="value-card-image" />
           <div class="value-card-content">
             <h4>✝️ Uganda Martyrs Sites</h4>
             <p>Visit the sacred grounds where the Uganda Martyrs gave their lives for faith. Experience powerful testimonies of courage and conviction at Namugongo Shrine and learn from their unwavering dedication to Christ.</p>
@@ -551,7 +767,7 @@
         </div>
         
         <div class="value-card">
-          <img src="https://images.unsplash.com/photo-1577056135068-fdbf6826e05f?w=600" alt="East African Revival Museum" class="value-card-image" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1769344499/Signpost_of_East_African_Revival_Museum__Mbarara_City__Western_Uganda_j8ggyw.jpg" alt="East African Revival Museum" class="value-card-image" />
           <div class="value-card-content">
             <h4>🔥 East African Revival Museum</h4>
             <p>Explore the history of the East African Revival movement that transformed millions of lives. Connect with the spiritual heritage that continues to influence Christianity across Africa and beyond.</p>
@@ -559,7 +775,7 @@
         </div>
         
         <div class="value-card">
-          <img src="https://images.unsplash.com/photo-1529693662653-9d480530a697?w=600" alt="Spiritual Growth" class="value-card-image" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763725295/Forgiveness_course_at_Gayaza_high_1_psmwlq.jpg" alt="Spiritual Growth" class="value-card-image" />
           <div class="value-card-content">
             <h4>🙏 Spiritual Growth Activities</h4>
             <p>Engage in daily devotions, worship sessions, prayer walks, and biblical teaching. Participate in local church services and experience authentic African worship and fellowship.</p>
@@ -567,7 +783,7 @@
         </div>
         
         <div class="value-card">
-          <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600" alt="Community Engagement" class="value-card-image" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1769344917/community_d843fc.jpg" alt="Community Engagement" class="value-card-image" />
           <div class="value-card-content">
             <h4>🤝 Community Engagement</h4>
             <p>Serve alongside local communities through educational programs, health initiatives, and church partnerships. Build lasting relationships and make tangible differences in people's lives.</p>
@@ -575,7 +791,7 @@
         </div>
         
         <div class="value-card">
-          <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=600" alt="Cultural Immersion" class="value-card-image" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1769344881/culture_wzhexm.jpg" alt="Cultural Immersion" class="value-card-image" />
           <div class="value-card-content">
             <h4>🌍 Cultural Immersion</h4>
             <p>Experience authentic Ugandan culture through village visits, traditional meals, music and dance, and meaningful interactions with local families and church communities.</p>
@@ -603,7 +819,7 @@
             <li>Ground Transportation</li>
             <li>Experienced Guide</li>
           </ul>
-          <a href="#contact-form" class="btn">Request Quote</a>
+          <a href="https://wa.me/256702238158?text=Hi!%20I'd%20like%20a%20quote%20for%20the%20Essential%20Mission%20(7-day)%20package." target="_blank" rel="noopener noreferrer" class="btn">Request Quote on WhatsApp</a>
         </div>
         
         <div class="pricing-card featured">
@@ -620,7 +836,7 @@
             <li>Airport Transfers Included</li>
             <li>24/7 Support</li>
           </ul>
-          <a href="#contact-form" class="btn primary">Request Quote</a>
+          <a href="https://wa.me/256702238158?text=Hi!%20I'd%20like%20a%20quote%20for%20the%20Complete%20Mission%20Safari%20(14-day)%20package." target="_blank" rel="noopener noreferrer" class="btn primary">Request Quote on WhatsApp</a>
         </div>
         
         <div class="pricing-card">
@@ -636,7 +852,7 @@
             <li>Dedicated Trip Coordinator</li>
             <li>Ministry Partnership Options</li>
           </ul>
-          <a href="#contact-form" class="btn">Request Quote</a>
+          <a href="https://wa.me/256702238158?text=Hi!%20I'd%20like%20a%20quote%20for%20a%20Custom%20Group%20Package." target="_blank" rel="noopener noreferrer" class="btn">Request Quote on WhatsApp</a>
         </div>
       </div>
       
@@ -657,81 +873,35 @@
       <h3>Ready to Transform Your Faith?</h3>
       <p>Join us for an unforgettable mission trip experience that will deepen your faith, expand your worldview, and create memories that last a lifetime.</p>
       <div class="cta-row">
-        <a class="btn primary" href="#contact-form" style="background:white;color:var(--primary);margin:0.5rem">Sign Up Now</a>
+        <a class="btn primary" href="https://wa.me/256702238158?text=Hello!%20I'm%20ready%20to%20sign%20up%20for%20a%20TEN%20Mission%20Trip%20to%20Uganda." target="_blank" rel="noopener noreferrer" style="background:white;color:var(--primary);margin:0.5rem">Sign Up on WhatsApp</a>
         <a class="btn" href="index.html#contact" style="border-color:white;color:white;margin:0.5rem">Contact Us</a>
       </div>
       <p style="margin-top:2rem;font-size:1rem;opacity:0.9">✨ By participating in our mission trips, you're not just taking a journey—you're investing in communities, empowering local ministries, and becoming part of God's global story.</p>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact-form" class="card">
+    <!-- WhatsApp Contact Section -->
+    <section id="contact-form" class="card" style="text-align:center">
       <h3>Register Your Interest</h3>
-      <p>Fill out the form below and our team will contact you with more information about upcoming mission trips.</p>
+      <p>Connect with us directly on WhatsApp to discuss your mission trip plans, get personalized quotes, and ask any questions you have about our programs.</p>
       
-      <div class="contact-form">
-        <div id="formMessage" class="form-message"></div>
-        
-        <form id="missionTripForm" novalidate>
-          <div class="form-group">
-            <label for="name">Full Name <span style="color:red">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="Enter your full name">
-          </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address <span style="color:red">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-          </div>
-          
-          <div class="form-group">
-            <label for="phone">Phone Number <span style="color:red">*</span></label>
-            <input type="tel" id="phone" name="phone" required placeholder="+1 (555) 123-4567">
-          </div>
-          
-          <div class="form-group">
-            <label for="country">Country of Residence</label>
-            <input type="text" id="country" name="country" placeholder="e.g., United States">
-          </div>
-          
-          <div class="form-group">
-            <label for="groupType">Group Type <span style="color:red">*</span></label>
-            <select id="groupType" name="groupType" required>
-              <option value="">Select one...</option>
-              <option value="individual">Individual</option>
-              <option value="church-group">Church Group</option>
-              <option value="family">Family</option>
-              <option value="youth-group">Youth Group</option>
-              <option value="organization">Christian Organization</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="groupSize">Expected Group Size</label>
-            <input type="number" id="groupSize" name="groupSize" min="1" placeholder="Number of participants">
-          </div>
-          
-          <div class="form-group">
-            <label for="preferredPackage">Preferred Package</label>
-            <select id="preferredPackage" name="preferredPackage">
-              <option value="">Select a package...</option>
-              <option value="essential">Essential Mission (7 days - $1,200)</option>
-              <option value="complete">Complete Mission Safari (14 days - $2,500)</option>
-              <option value="custom">Custom Group Package</option>
-            </select>
-          </div>
-          
-          <div class="form-group">
-            <label for="preferredDates">Preferred Travel Dates</label>
-            <input type="text" id="preferredDates" name="preferredDates" placeholder="e.g., Summer 2026 or specific dates">
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Additional Information / Questions <span style="color:red">*</span></label>
-            <textarea id="message" name="message" required placeholder="Tell us about your interests, special requirements, or any questions you have..."></textarea>
-          </div>
-          
-          <button type="submit" class="btn-submit">Submit Registration</button>
-        </form>
+      <div style="max-width:500px;margin:2rem auto;padding:2rem;background:linear-gradient(135deg, #25D366 0%, #128C7E 100%);border-radius:12px;box-shadow:0 8px 30px rgba(37,211,102,0.3)">
+        <div style="font-size:4rem;margin-bottom:1rem">💬</div>
+        <h4 style="color:white;font-size:1.5rem;margin-bottom:1rem">Chat with Us on WhatsApp</h4>
+        <p style="color:white;opacity:0.95;margin-bottom:2rem;line-height:1.6">Get instant responses to your questions and personalized assistance for your mission trip registration.</p>
+        <a href="https://wa.me/256702238158?text=Hello!%20I'm%20interested%20in%20learning%20more%20about%20TEN%20Mission%20Trips%20to%20Uganda." target="_blank" rel="noopener noreferrer" class="btn primary" style="background:white;color:#25D366;font-size:1.1rem;padding:1rem 2rem;display:inline-block;text-decoration:none;border-radius:8px;font-weight:600;transition:transform 0.3s ease,box-shadow 0.3s ease" onmouseover="this.style.transform='scale(1.05)';this.style.boxShadow='0 6px 20px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='scale(1)';this.style.boxShadow='none'">📱 Start WhatsApp Chat</a>
+        <p style="color:white;margin-top:1.5rem;font-size:0.95rem;opacity:0.9">📞 +256 702 238 158</p>
+      </div>
+      
+      <div style="margin-top:2rem;padding:1.5rem;background:#f7f9fc;border-radius:8px;max-width:600px;margin-left:auto;margin-right:auto">
+        <h4 style="color:var(--primary);margin-bottom:1rem">💡 What to Share with Us:</h4>
+        <ul style="text-align:left;line-height:1.8;color:var(--text)">
+          <li>Your name and country</li>
+          <li>Group type (individual, church, family, etc.)</li>
+          <li>Expected group size</li>
+          <li>Preferred travel dates</li>
+          <li>Package interest (Essential, Complete Safari, or Custom)</li>
+          <li>Any special requirements or questions</li>
+        </ul>
       </div>
     </section>
 
