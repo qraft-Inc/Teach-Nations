@@ -12,12 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
       hamburger.setAttribute('aria-expanded', isExpanded);
     });
 
-    // Close menu when clicking on a link
+    // Close menu when clicking on a link (except dropdown toggles)
     navLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
+      link.addEventListener('click', function(e) {
+        // Don't close if it's a dropdown toggle
+        if (!link.classList.contains('dropdown-toggle')) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
       });
     });
 
@@ -30,6 +33,30 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  // Dropdown menu toggle for mobile
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+      // On mobile, toggle dropdown visibility
+      if (window.innerWidth <= 800) {
+        e.preventDefault();
+        const dropdown = toggle.parentElement;
+        const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+        
+        // Toggle visibility
+        if (dropdownMenu.style.display === 'block') {
+          dropdownMenu.style.display = 'none';
+        } else {
+          // Close other dropdowns
+          document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.display = 'none';
+          });
+          dropdownMenu.style.display = 'block';
+        }
+      }
+    });
+  });
 
   // Navbar scroll effect
   const header = document.querySelector('.site-header');
@@ -136,6 +163,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start autoplay
     startAutoplay();
+  }
+
+  // Smooth scroll to section if hash is present in URL
+  if (window.location.hash) {
+    setTimeout(function() {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        const headerHeight = header ? header.offsetHeight : 82;
+        const targetPosition = target.offsetTop - headerHeight - 20;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100);
   }
 });
 
