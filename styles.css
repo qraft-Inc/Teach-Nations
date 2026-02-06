@@ -35,8 +35,8 @@ body{font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;margin:0;background:v
 .dropdown-toggle{cursor:pointer;display:flex;align-items:center;gap:0.25rem}
 .dropdown-toggle::after{content:'▼';font-size:0.7rem;transition:transform 0.3s}
 .dropdown:hover .dropdown-toggle::after{transform:rotate(180deg)}
-.dropdown-menu{position:absolute;top:100%;left:0;background:#fff;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.15);min-width:220px;opacity:0;visibility:hidden;display:none;transform:translateY(-10px);transition:opacity 0.3s,transform 0.3s,visibility 0.3s;z-index:1000;margin-top:0.5rem;list-style:none;padding:0;margin-left:0}
-.dropdown:hover .dropdown-menu{opacity:1;visibility:visible;display:block;transform:translateY(0)}
+.dropdown-menu{position:absolute;top:100%;left:0;background:#fff;border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.15);min-width:220px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s ease;z-index:1000;margin-top:0.5rem;list-style:none;padding:0;margin-left:0}
+.dropdown:hover .dropdown-menu{max-height:500px;opacity:1;visibility:visible;transform:translateY(0)}
 .dropdown-menu li{display:block;margin:0;list-style:none}
 .dropdown-menu a{display:block;padding:0.75rem 1rem;color:#111;white-space:nowrap;border-radius:4px;margin:0.25rem}
 .dropdown-menu a:hover{background:var(--bg);color:var(--accent)}
