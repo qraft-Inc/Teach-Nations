@@ -16,7 +16,7 @@ All page titles now include "Teach Nations" branding and are optimized for searc
 #### Examples:
 - ✅ Homepage: "Teach Nations — Transforming Nations Through Biblical Discipleship & Leadership Training"
 - ✅ BSOW: "Bible School on Wheels - 3 Year Biblical Discipleship Program | Teach Nations"
-- ✅ Conferences: "Upcoming Conferences & Events - Graduation Ceremony 2025 | Teach Nations"
+- ✅ Conferences: "Upcoming Conferences & Events - Graduation Ceremony 2026 | Teach Nations"
 - ✅ Schools: "Schools Discipleship Programs - Faith-Based Education & Mentorship | Teach Nations"
 
 ### 2. Meta Descriptions (Enhanced)

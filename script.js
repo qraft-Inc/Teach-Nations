@@ -31,7 +31,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // Parallax scroll effect
+  // Navbar scroll effect
+  const header = document.querySelector('.site-header');
+  const heroCarousel = document.querySelector('.hero-carousel');
+  
+  window.addEventListener('scroll', function() {
+    const scrolled = window.scrollY;
+    
+    // Add shadow to navbar on scroll
+    if (scrolled > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+    
+    // Parallax effect on hero
+    if (heroCarousel && scrolled < window.innerHeight) {
+      const parallaxSpeed = 0.5;
+      heroCarousel.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
+    }
+  });
+
+  // Parallax scroll effect for sections
   const parallaxSections = document.querySelectorAll('.parallax-section');
   
   const observerOptions = {

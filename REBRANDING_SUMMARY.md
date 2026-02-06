@@ -75,7 +75,7 @@ All course pages in `/courses/` directory:
 - Logo image replaced
 - Organization name updated
 - Copyright notices changed from "Teach Every Nation - Uganda" to "Teach Nations"
-- All years updated to 2025/2026 as appropriate
+- All years updated to 2026/2026 as appropriate
 
 #### Contact Information
 - Updated address references
