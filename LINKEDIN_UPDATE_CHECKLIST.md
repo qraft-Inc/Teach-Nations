@@ -13,7 +13,7 @@ Based on the formal request from Stephan De Villiers (Vice President, Teach Ever
 ### 2. Organization Name
 - [ ] Primary Name: "Teach Nations"
 - [ ] Tagline: Consider "Transforming Nations Through Biblical Discipleship & Leadership Training"
-- [ ] Remove any references to "TEN - Uganda" or "Teach Every Nation - Uganda"
+- [ ] Remove any references to "teachnations" or "Teach Every Nation - Uganda"
 
 ### 3. About Section
 Update to clearly position your organization as independent. Suggested text:
@@ -37,7 +37,7 @@ Our mission is to raise a generation of believers who are spiritually grounded, 
 ### 4. Experience/Work History Section
 
 #### For Team Members:
-Update job titles to reflect "Teach Nations" not "TEN - Uganda":
+Update job titles to reflect "Teach Nations" not "teachnations":
 
 **Example for Brian Mucyo**:
 - **Title**: Founder & Director
@@ -45,7 +45,7 @@ Update job titles to reflect "Teach Nations" not "TEN - Uganda":
 - **Description**: Leads Teach Nations' strategic vision, builds partnerships globally, and champions the mission of discipleship and transformation across East Africa. Teach Nations partners with Teach Every Nation to deliver biblical training programs in Uganda and beyond.
 
 ### 5. Posts & Content
-- [ ] Review recent posts mentioning "TEN - Uganda"
+- [ ] Review recent posts mentioning "teachnations"
 - [ ] Add clarifying note if needed: "Note: Teach Nations is an independent organization that partners with Teach Every Nation for course delivery"
 - [ ] Future posts should use "Teach Nations" branding
 
@@ -74,7 +74,7 @@ List clearly:
 - "Authorized partner for TEN course delivery"
 
 ❌ **DO NOT SAY**:
-- "TEN - Uganda" as your organization name
+- "teachnations" as your organization name
 - "Teach Every Nation - Uganda"
 - "Official branch/representative of TEN"
 - "Regional office of Teach Every Nation"
@@ -94,7 +94,7 @@ I am writing to confirm that we have completed all requested changes to clearly 
 
 **Changes Completed**:
 ✅ Replaced TEN logo with Teach Nations logo on LinkedIn and website
-✅ Updated all references from "Teach Every Nation - Uganda" and "TEN - Uganda" to "Teach Nations"
+✅ Updated all references from "Teach Every Nation - Uganda" and "teachnations" to "Teach Nations"
 ✅ Removed any implication of being an official branch or representative
 ✅ Clearly positioned Teach Nations as independent organization offering TEN courses through partnership
 ✅ Updated team titles and descriptions

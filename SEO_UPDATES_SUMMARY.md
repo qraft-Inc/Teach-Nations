@@ -274,7 +274,7 @@ Added JSON-LD structured data for rich search results:
 
 | Element | Before | After | Impact |
 |---------|--------|-------|--------|
-| Brand Name | "TEN - Uganda" | "Teach Nations" | High - Brand distinction |
+| Brand Name | "teachnations" | "Teach Nations" | High - Brand distinction |
 | Meta Descriptions | Generic | Keyword-rich, compelling | High - CTR improvement |
 | Keywords | Focused on TEN | Focused on Teach Nations + services | High - Target audience |
 | Structured Data | Basic | Enhanced with Course/Org schema | Medium - Rich results |
