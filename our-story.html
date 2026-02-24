@@ -18,16 +18,27 @@
   <meta name="twitter:site" content="@teachnations">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .story-hero{background:linear-gradient(rgba(11,95,255,0.75),rgba(11,131,255,0.75)),url('assets/story-gallery.svg');background-size:cover;background-position:center;padding:3rem 0;color:#fff;text-align:center}
-    .story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-top:1.5rem}
+    .story-hero{background:linear-gradient(rgba(11,95,255,0.75),rgba(11,131,255,0.75)),url('https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763209258/IMGL4324_xfpvhk.jpg');background-size:cover;background-position:center;padding:2.5rem 0;color:#fff;text-align:center}
+    .story-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:1.5rem}
     .story-card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 20px rgba(2,6,23,0.08)}
-    .story-card img{width:100%;height:240px;object-fit:cover;display:block}
-    .story-card-content{padding:1.25rem}
+    .story-card img{width:100%;height:200px;object-fit:cover;display:block}
+    .story-card-content{padding:1rem}
     .story-card h4{margin:0 0 0.5rem;color:#0b5fff}
     .timeline{position:relative;padding:1rem 0;margin:2rem 0}
-    .timeline-item{display:flex;gap:1rem;margin-bottom:2rem;position:relative}
-    .timeline-year{min-width:80px;font-weight:700;color:#0b5fff;font-size:1.1rem}
-    .timeline-content{flex:1;background:#f7f9fc;padding:1rem;border-radius:8px;border-left:4px solid #0b5fff}
+    .timeline-item{display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem;position:relative}
+    .timeline-year{font-weight:700;color:#0b5fff;font-size:1.05rem}
+    .timeline-content{background:#f7f9fc;padding:1rem;border-radius:8px;border-left:4px solid #0b5fff}
+
+    @media (min-width:800px){
+      .story-hero{padding:3.25rem 0}
+      .story-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+      .story-card img{height:240px}
+    }
+
+    @media (min-width:900px){
+      .timeline-item{flex-direction:row;gap:1rem;margin-bottom:2rem}
+      .timeline-year{min-width:80px;font-size:1.1rem}
+    }
   </style>
 </head>
 <body>
@@ -38,15 +49,20 @@
         <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770383996/new_teachnations_logo_eaxqms.png" alt="Teach Nations" class="logo-img" />
         <span>Our Story</span>
       </div>
-      <nav>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <nav class="nav-menu">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li class="dropdown">
             <a href="bible-school-on-wheels.html" class="dropdown-toggle">BSOW</a>
             <ul class="dropdown-menu">
-              <li><a href="bible-school-on-wheels.html#bsow-1">Bible School On Wheels 1</a></li>
-              <li><a href="bible-school-on-wheels.html#bsow-2">Bible School On Wheels 2</a></li>
-              <li><a href="bible-school-on-wheels.html#bsow-3">Bible School On Wheels 3</a></li>
+              <li><a href="bible-school-on-wheels.html#bsow-1"><span class="dropdown-icon icon-bsow-1" aria-hidden="true"></span>Bible School On Wheels 1</a></li>
+              <li><a href="bible-school-on-wheels.html#bsow-2"><span class="dropdown-icon icon-bsow-2" aria-hidden="true"></span>Bible School On Wheels 2</a></li>
+              <li><a href="bible-school-on-wheels.html#bsow-3"><span class="dropdown-icon icon-bsow-3" aria-hidden="true"></span>Bible School On Wheels 3</a></li>
             </ul>
           </li>
           <li><a href="schools-discipleship.html">Schools</a></li>
@@ -112,28 +128,28 @@
           </div>
         </div>
         <div class="story-card">
-          <img src="assets/team-placeholder.svg" alt="Schools discipleship" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1771946465/WhatsApp_Image_2026-02-24_at_6.19.04_PM_heecwx.jpg" alt="Schools discipleship" />
           <div class="story-card-content">
             <h4>Schools Discipleship</h4>
             <p>High school students participating in leadership and faith formation programs.</p>
           </div>
         </div>
         <div class="story-card">
-          <img src="assets/community-placeholder.svg" alt="Community outreach" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1771946799/community_adqmpe.jpg" alt="Community outreach" />
           <div class="story-card-content">
             <h4>Community Outreach</h4>
             <p>Hospital visits and compassion projects bringing hope and practical care.</p>
           </div>
         </div>
         <div class="story-card">
-          <img src="assets/conference-placeholder.svg" alt="Leadership conferences" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763210020/IMGL4374_tt17eo.jpg" alt="Leadership conferences" />
           <div class="story-card-content">
             <h4>Leadership Conferences</h4>
             <p>Regional gatherings where leaders are equipped for transformation and impact.</p>
           </div>
         </div>
         <div class="story-card">
-          <img src="assets/lms-banner.svg" alt="Online learning" />
+          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763212454/bsow_cltwir.png" alt="Online learning" />
           <div class="story-card-content">
             <h4>Online Learning</h4>
             <p>Digital platforms expanding access to biblical training and leadership courses.</p>
