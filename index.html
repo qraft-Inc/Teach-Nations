@@ -148,7 +148,7 @@
     <div class="container">
       <p class="eyebrow" style="text-align:center;display:block;margin-bottom:0.85rem">Find your path</p>
       <div class="segment-toggle" role="tablist" aria-label="I am a...">
-        <button type="button" class="segment-btn active" role="tab" aria-selected="true" data-segment="individual">Individuals</button>
+        <button type="button" class="segment-btn" role="tab" aria-selected="false" data-segment="individual">Individuals</button>
         <button type="button" class="segment-btn" role="tab" aria-selected="false" data-segment="org">Churches, Schools &amp; Organizations</button>
         <button type="button" class="segment-btn" role="tab" aria-selected="false" data-segment="donor">Donors &amp; Sponsors</button>
       </div>
@@ -157,106 +157,120 @@
 
   <main id="main" class="container" role="main">
     <section id="about" class="card parallax-section" data-speed="0.5">
-      <h3>About Teach Nations</h3>
-      <p>Teach Nations is a Christian discipleship and leadership movement committed to developing individuals who live out biblical truth and lead with integrity, purpose, and excellence through biblical education, leadership development, professional training, community outreach, and mission engagement.</p>
-      <p>Our Bible School on Wheels program is delivered <strong>in partnership with Teach Every Nation</strong>, alongside our own Flourish, Marksman, Transformers, and Leadership &amp; Professional Development programs across Uganda and East Africa.</p>
-    </section>
-
-    <section id="mission-vision" class="card parallax-section" data-speed="0.4">
-      <h3>Mission &amp; Vision</h3>
-      <p><strong>Mission:</strong> To make disciples, equip leaders, and transform communities through biblical education, leadership development, and intentional discipleship.</p>
-      <p><strong>Vision:</strong> To see generations of Christ-centered leaders transforming nations.</p>
-      <h4>Core Values</h4>
-      <ul class="values-grid">
-        <li class="value-chip">Biblical Truth</li>
-        <li class="value-chip">Discipleship</li>
-        <li class="value-chip">Leadership</li>
-        <li class="value-chip">Excellence</li>
-        <li class="value-chip">Integrity</li>
-        <li class="value-chip">Family</li>
-        <li class="value-chip">Service</li>
-        <li class="value-chip">Multiplication</li>
-      </ul>
+      <div class="about-grid">
+        <div class="about-copy">
+          <h2 class="section-title">About Teach Nations</h2>
+          <p>Teach Nations is a Christian discipleship and leadership movement committed to developing individuals who live out biblical truth and lead with integrity, purpose, and excellence through biblical education, leadership development, professional training, community outreach, and mission engagement.</p>
+          <p>Our Bible School on Wheels program is delivered <strong>in partnership with Teach Every Nation</strong>, alongside our own Flourish, Marksman, Transformers, and Leadership &amp; Professional Development programs across Uganda and East Africa.</p>
+          <div class="mission-vision">
+            <p><span class="eyebrow">Mission</span>To make disciples, equip leaders, and transform communities through biblical education, leadership development, and intentional discipleship.</p>
+            <p><span class="eyebrow">Vision</span>To see generations of Christ-centered leaders transforming nations.</p>
+          </div>
+        </div>
+        <div class="values-rail" aria-label="Core Values">
+          <h3>Core Values</h3>
+          <ul class="values-chain">
+            <li><span class="chain-dot"></span>Biblical Truth</li>
+            <li><span class="chain-dot"></span>Discipleship</li>
+            <li><span class="chain-dot"></span>Leadership</li>
+            <li><span class="chain-dot"></span>Excellence</li>
+            <li><span class="chain-dot"></span>Integrity</li>
+            <li><span class="chain-dot"></span>Family</li>
+            <li><span class="chain-dot"></span>Service</li>
+            <li><span class="chain-dot"></span>Multiplication</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="focus" class="card parallax-section" data-speed="0.3">
-      <h3>Our Programs</h3>
-      <div class="grid">
-        <div class="card course">
-          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763724833/MAIN_TEN_UGANDA_PIC_FOR_GRADUATION_2024_aemu3d.jpg" alt="Bible School on Wheels" />
-          <h4>Bible School on Wheels</h4>
-          <p><strong>In partnership with Teach Every Nation</strong>, our foundational discipleship and leadership training platform offering Bible-based courses, leadership development, personal discipleship, and ministry training, delivered online and in local communities.</p>
-          <a class="btn" href="bible-school-on-wheels.html">Read more</a>
+      <h2 class="section-title">Our Programs</h2>
+      <p class="section-lede">Five ways to grow as a disciple and leader — for individuals, for churches, schools and organizations, and for donors and sponsors.</p>
+      <div class="path-rail">
+        <div class="program-node" data-segment="individual org donor">
+          <div class="program-card">
+            <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763724833/MAIN_TEN_UGANDA_PIC_FOR_GRADUATION_2024_aemu3d.jpg" alt="Bible School on Wheels" />
+            <h3>Bible School on Wheels</h3>
+            <p><strong>In partnership with Teach Every Nation</strong>, our foundational discipleship and leadership training platform offering Bible-based courses, leadership development, personal discipleship, and ministry training, delivered online and in local communities.</p>
+            <a class="btn" href="bible-school-on-wheels.html">Explore Bible School on Wheels</a>
+          </div>
         </div>
-        <div class="card course">
-          <img src="assets/course-placeholder.svg" alt="Flourish" />
-          <h4>Flourish</h4>
-          <p>Teach Nations' women's discipleship program.</p>
-          <a class="btn" href="flourish.html">Read more</a>
+        <div class="program-node" data-segment="individual org donor">
+          <div class="program-card">
+            <img src="assets/course-placeholder.svg" alt="Flourish" />
+            <h3>Flourish</h3>
+            <p>Teach Nations' women's discipleship program.</p>
+            <a class="btn" href="flourish.html">Explore Flourish</a>
+          </div>
         </div>
-        <div class="card course">
-          <img src="assets/course-placeholder.svg" alt="Marksman" />
-          <h4>Marksman</h4>
-          <p>Teach Nations' men's discipleship program.</p>
-          <a class="btn" href="marksman.html">Read more</a>
+        <div class="program-node" data-segment="individual org donor">
+          <div class="program-card">
+            <img src="assets/course-placeholder.svg" alt="Marksman" />
+            <h3>Marksman</h3>
+            <p>Teach Nations' men's discipleship program.</p>
+            <a class="btn" href="marksman.html">Explore Marksman</a>
+          </div>
         </div>
-        <div class="card course">
-          <img src="assets/course-placeholder.svg" alt="Transformers" />
-          <h4>Transformers</h4>
-          <p>Teach Nations' youth discipleship and leadership program.</p>
-          <a class="btn" href="transformers.html">Read more</a>
+        <div class="program-node" data-segment="individual org donor">
+          <div class="program-card">
+            <img src="assets/course-placeholder.svg" alt="Transformers" />
+            <h3>Transformers</h3>
+            <p>Teach Nations' youth discipleship and leadership program.</p>
+            <a class="btn" href="transformers.html">Explore Transformers</a>
+          </div>
         </div>
-        <div class="card course">
-          <img src="assets/course-placeholder.svg" alt="Leadership & Professional Development" />
-          <h4>Leadership &amp; Professional Development</h4>
-          <p>Training in leadership, communication, productivity, purpose discovery, career development, entrepreneurship, financial stewardship, family and parenting, and workplace excellence — for churches, schools, organizations, businesses, and individuals.</p>
-          <a class="btn" href="leadership-development.html">Read more</a>
+        <div class="program-node" data-segment="individual org">
+          <div class="program-card">
+            <img src="assets/course-placeholder.svg" alt="Leadership & Professional Development" />
+            <h3>Leadership &amp; Professional Development</h3>
+            <p>Training in leadership, communication, productivity, purpose discovery, career development, entrepreneurship, financial stewardship, family and parenting, and workplace excellence — for churches, schools, organizations, businesses, and individuals.</p>
+            <a class="btn" href="leadership-development.html">Explore Leadership &amp; Professional Development</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="impact" class="card parallax-section" data-speed="0.35">
-      <h3>Our Impact</h3>
-      <div class="grid">
-        <div class="card course"><h4>Raise Disciples</h4><p>Forming Christ-centered disciples grounded in biblical truth.</p></div>
-        <div class="card course"><h4>Equip Pastors &amp; Leaders</h4><p>Training pastors and leaders for effective, biblically grounded ministry.</p></div>
-        <div class="card course"><h4>Develop Youth</h4><p>Raising up the next generation through discipleship and leadership formation.</p></div>
-        <div class="card course"><h4>Strengthen Families</h4><p>Equipping families to live out biblical values at home.</p></div>
-        <div class="card course"><h4>Partner with Churches &amp; Schools</h4><p>Working alongside churches and schools to extend discipleship and leadership training.</p></div>
-        <div class="card course"><h4>Mobilize Mission Teams</h4><p>Sending and hosting mission teams for evangelism and community outreach.</p></div>
-      </div>
+      <h2 class="section-title">Our Impact</h2>
+      <ul class="impact-chain">
+        <li><span class="chain-dot"></span><h3>Raise Disciples</h3><p>Forming Christ-centered disciples grounded in biblical truth.</p></li>
+        <li><span class="chain-dot"></span><h3>Equip Pastors &amp; Leaders</h3><p>Training pastors and leaders for effective, biblically grounded ministry.</p></li>
+        <li><span class="chain-dot"></span><h3>Develop Youth</h3><p>Raising up the next generation through discipleship and leadership formation.</p></li>
+        <li><span class="chain-dot"></span><h3>Strengthen Families</h3><p>Equipping families to live out biblical values at home.</p></li>
+        <li><span class="chain-dot"></span><h3>Partner with Churches &amp; Schools</h3><p>Working alongside churches and schools to extend discipleship and leadership training.</p></li>
+      </ul>
     </section>
 
     <section id="get-involved" class="card parallax-section" data-speed="0.3">
-      <h3>Get Involved</h3>
+      <h2 class="section-title">Get Involved</h2>
       <div class="involved-grid">
-        <div class="involved-item">
-          <h4>Study at Bible School</h4>
+        <div class="involved-item" data-segment="individual">
+          <h3>Study at Bible School</h3>
           <p>Enroll in Bible School on Wheels and grow as a disciple and leader.</p>
           <a class="btn" href="bible-school-on-wheels.html">Apply Now</a>
         </div>
-        <div class="involved-item">
-          <h4>Volunteer</h4>
+        <div class="involved-item" data-segment="individual">
+          <h3>Volunteer</h3>
           <p>Serve alongside our team in ministry and community programs.</p>
           <a class="btn" href="#contact">Contact Us</a>
         </div>
-        <div class="involved-item">
-          <h4>Partner</h4>
+        <div class="involved-item" data-segment="org">
+          <h3>Partner</h3>
           <p>Partner your church, school, or organization with Teach Nations.</p>
           <a class="btn" href="#contact">Contact Us</a>
         </div>
-        <div class="involved-item">
-          <h4>Sponsor a Student</h4>
+        <div class="involved-item" data-segment="donor">
+          <h3>Sponsor a Student</h3>
           <p>Help make discipleship and leadership training accessible to more students.</p>
           <a class="btn" href="#contact">Contact Us</a>
         </div>
-        <div class="involved-item">
-          <h4>Attend Events</h4>
+        <div class="involved-item" data-segment="individual org donor">
+          <h3>Attend Events</h3>
           <p>Join our intakes and other upcoming events.</p>
           <a class="btn" href="#register">See Events</a>
         </div>
-        <div class="involved-item">
-          <h4>Invite Us to Train Your Organization</h4>
+        <div class="involved-item" data-segment="org">
+          <h3>Invite Us to Train Your Organization</h3>
           <p>Bring leadership and professional development training to your church, school, or business.</p>
           <a class="btn" href="leadership-development.html">Learn More</a>
         </div>
@@ -264,24 +278,24 @@
     </section>
 
     <section id="commitment" class="card parallax-section" data-speed="0.35">
-      <h3>Our Commitment</h3>
+      <h2 class="section-title">Our Commitment</h2>
       <p>Teach Nations exists to build a movement of biblically grounded, purpose-driven, and socially responsible leaders across Uganda and East Africa. <strong>Through our partnership with Teach Every Nation for course delivery</strong>, alongside our own discipleship programs and community outreaches, we demonstrate the love of Christ in word and deed—transforming individuals, schools, and communities.</p>
     </section>
 
     <section id="team" class="card parallax-section" data-speed="0.45">
-      <h3>Our Team</h3>
+      <h2 class="section-title">Our Team</h2>
       <div class="team-grid">
-        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770390184/mucyo_2_qf7qsq.jpg" alt="Brian Mucyo"/><h4>Brian Mucyo</h4><p class="role">Founder & Executive Director, Teach Nations</p><p>Leads Teach Nations' strategic vision, builds partnerships globally, and champions the mission of discipleship and transformation across East Africa.</p></div>
-        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763726599/Anthony_Bugembe_ob0vxn.jpg" alt="Anthony Bugembe"/><h4>Anthony Bugembe</h4><p class="role">Managing Director</p><p>Oversees program implementation, curriculum, and training across all focus areas.</p></div>
-        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1769343712/Julian_Kusasira_Ogwal_hx0dcf.jpg" alt="Julian Ogwal"/><h4>Julian Ogwal</h4><p class="role">Head of Administration & Finance</p><p>Oversees financial management, logistics, and operational systems.</p></div>
-        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770388776/alex_kathryn_ivefzg.jpg" alt="Alex Catherine Nagawa"/><h4>Alex Catherine Nagawa</h4><p class="role">Communications Manager</p><p>Manages internal and external communications, media, and partnerships.</p></div>
-        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1771945049/akatukunda_ruth_mr3c8b.jpg" alt="Ruth Akatukunda"/><h4>Ruth Akatukunda</h4><p class="role">Programs Coordinator</p><p>Coordinates program delivery and supports team operations.</p></div>
-        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763725953/Agnes_Naluwagga_Adoko_xhxlda.jpg" alt="Agnes Naluwagga"/><h4>Agnes Naluwagga</h4><p class="role"> Operations Coordinator</p><p>Keeps operations running smoothly and supports strategic execution.</p></div>
+        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770390184/mucyo_2_qf7qsq.jpg" alt="Brian Mucyo"/><h3>Brian Mucyo</h3><p class="role">Founder & Executive Director, Teach Nations</p><p>Leads Teach Nations' strategic vision, builds partnerships globally, and champions the mission of discipleship and transformation across East Africa.</p></div>
+        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763726599/Anthony_Bugembe_ob0vxn.jpg" alt="Anthony Bugembe"/><h3>Anthony Bugembe</h3><p class="role">Managing Director</p><p>Oversees program implementation, curriculum, and training across all focus areas.</p></div>
+        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1769343712/Julian_Kusasira_Ogwal_hx0dcf.jpg" alt="Julian Ogwal"/><h3>Julian Ogwal</h3><p class="role">Head of Administration & Finance</p><p>Oversees financial management, logistics, and operational systems.</p></div>
+        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770388776/alex_kathryn_ivefzg.jpg" alt="Alex Catherine Nagawa"/><h3>Alex Catherine Nagawa</h3><p class="role">Communications Manager</p><p>Manages internal and external communications, media, and partnerships.</p></div>
+        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1771945049/akatukunda_ruth_mr3c8b.jpg" alt="Ruth Akatukunda"/><h3>Ruth Akatukunda</h3><p class="role">Programs Coordinator</p><p>Coordinates program delivery and supports team operations.</p></div>
+        <div class="team-card"><img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763725953/Agnes_Naluwagga_Adoko_xhxlda.jpg" alt="Agnes Naluwagga"/><h3>Agnes Naluwagga</h3><p class="role"> Operations Coordinator</p><p>Keeps operations running smoothly and supports strategic execution.</p></div>
       </div>
     </section>
 
     <section id="register" class="card intake-highlight" aria-labelledby="register-heading">
-      <h3 id="register-heading">🎓 May 2026 Intake Now Open!</h3>
+      <h2 id="register-heading" class="section-title">🎓 May 2026 Intake Now Open!</h2>
       <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1777376071/may_intake_l4yjwi.jpg" alt="May 2026 Intake" style="margin-bottom:1.5rem;border-radius:8px;width:100%;height:auto;object-fit:cover;max-height:500px" />
       <p><strong>You are invited to a Bible School on Wheels Online course</strong></p>
       <p><strong>Start Date & Time:</strong> 1st May 2026, 07:30 PM East African Time (EAT)</p>
@@ -295,13 +309,23 @@
       </div>
     </section>
 
-    <section id="contact" class="card contact">
-      <h3>Contact</h3>
-      <p><strong>Teach Nations</strong></p>
-      <p>Making Disciples. Equipping Leaders. Creating Generational Impact.</p>
-      <p>Email: <a href="mailto:info@teachnations.org">info@teachnations.org</a></p>
-      <p>Website: <a href="https://teachnations.org">www.teachnations.org</a></p>
-      <p>Address: Teach Nations, Bukoto Kampala</p>
+    <section id="contact" class="card contact-block">
+      <div class="contact-inner">
+        <div>
+          <svg class="brand-mark on-dark" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:2.4em;height:1.8em;margin-bottom:1rem">
+            <circle class="mark-dots" cx="38" cy="16" r="11"/>
+            <circle class="mark-dots" cx="82" cy="16" r="11"/>
+            <path class="mark-path" d="M6 78 L36 32 L60 62 L84 32 L114 78" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2 class="section-title" style="color:var(--white)">Teach Nations</h2>
+          <p class="eyebrow">Making Disciples. Equipping Leaders. Creating Generational Impact.</p>
+        </div>
+        <dl class="contact-facts">
+          <div><dt>Email</dt><dd><a href="mailto:info@teachnations.org">info@teachnations.org</a></dd></div>
+          <div><dt>Website</dt><dd><a href="https://teachnations.org">www.teachnations.org</a></dd></div>
+          <div><dt>Address</dt><dd>Bukoto, Kampala, Uganda</dd></div>
+        </dl>
+      </div>
     </section>
   </main>
 

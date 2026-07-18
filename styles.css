@@ -161,6 +161,15 @@ section h3{margin-top:0;margin-bottom:1.5rem;color:var(--navy)}
 .intake-highlight{background:linear-gradient(135deg,var(--white) 0%,rgba(11,184,238,0.08) 100%);border:2px solid var(--cyan);box-shadow:0 4px 20px rgba(11,184,238,0.16)}
 .intake-highlight h2,.intake-highlight h3{color:var(--navy)}
 .contact a{color:var(--navy);font-weight:700;text-decoration-color:var(--cyan);text-decoration-thickness:2px}
+.contact-block{background:var(--navy);color:var(--white)}
+.contact-block .eyebrow{color:var(--cyan);font-size:var(--step0);text-transform:none;letter-spacing:0.01em}
+.contact-inner{display:grid;grid-template-columns:1fr;gap:2rem}
+@media (min-width:800px){.contact-inner{grid-template-columns:1.2fr 1fr;align-items:center}}
+.contact-facts{margin:0;display:grid;gap:1.25rem}
+.contact-facts dt{font-family:var(--font-utility);font-size:var(--step-1);text-transform:uppercase;letter-spacing:0.08em;color:rgba(255,255,255,0.6);margin-bottom:0.2rem}
+.contact-facts dd{margin:0;font-size:var(--step1);font-weight:700}
+.contact-facts a{color:var(--white);text-decoration-color:var(--cyan);text-decoration-thickness:2px}
+.contact-facts a:hover{color:var(--cyan)}
 .site-footer{padding:1.25rem 0;text-align:center;color:var(--muted)}
 .iframe-wrap{position:relative;width:100%;padding-bottom:120%;height:0;overflow:hidden;border-radius:8px}
 .iframe-wrap iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
@@ -206,14 +215,31 @@ section h3{margin-top:0;margin-bottom:1.5rem;color:var(--navy)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.14);padding:1.5rem 0;text-align:center}
 .footer-bottom p{margin:0.25rem 0;color:rgba(255,255,255,0.7);font-size:0.9rem}
 .footer-tagline{font-family:var(--font-utility);font-size:0.8rem!important;letter-spacing:0.04em}
-/* Mission, Vision & Core Values */
-.values-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.85rem;margin:1rem 0 0;list-style:none;padding:0}
-.value-chip{background:rgba(11,184,238,0.08);border:1px solid rgba(11,184,238,0.25);border-radius:8px;padding:0.85rem 1rem;text-align:center;font-weight:700;color:var(--dark)}
+/* Section-level headings — semantically h2, sized independent of the tag
+   so promoting old h3s to h2 doesn't blow up to the h2 default size. */
+.section-title{font-size:var(--step2);color:var(--navy);margin:0 0 1rem}
+.section-lede{color:var(--gray);max-width:640px;margin:0 0 2rem;font-size:var(--step0)}
+
+/* About + Mission/Vision + Core Values */
+.about-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:start}
+@media (min-width:900px){.about-grid{grid-template-columns:1.3fr 1fr}}
+.mission-vision{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(7,37,42,0.1)}
+.mission-vision p{margin-bottom:1rem}
+.mission-vision .eyebrow{display:block;margin-bottom:0.15rem}
+.values-rail h3{font-size:var(--step1);margin-bottom:1.25rem}
+.values-chain{list-style:none;margin:0;padding:0}
+.values-chain li{position:relative;padding:0 0 1.15rem 2.1rem;font-weight:700;color:var(--navy)}
+.values-chain li::before{content:'';position:absolute;left:5px;top:22px;bottom:-4px;width:2px;background:rgba(11,184,238,0.28)}
+.values-chain li:last-child::before{display:none}
+.values-chain li:last-child{padding-bottom:0}
+.chain-dot{position:absolute;left:0;top:3px;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(11,184,238,0.14)}
+
 /* Get Involved */
 .involved-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem}
-.involved-item{background:rgba(11,184,238,0.06);border-left:4px solid var(--accent);border-radius:8px;padding:1.1rem 1.25rem}
-.involved-item h4{margin:0 0 0.4rem}
+.involved-item{background:rgba(11,184,238,0.06);border-left:4px solid var(--cyan);border-radius:8px;padding:1.1rem 1.25rem;transition:opacity 0.3s ease,filter 0.3s ease}
+.involved-item h3{margin:0 0 0.4rem;font-size:var(--step1)}
 .involved-item p{margin:0 0 0.75rem;color:var(--muted)}
+
 /* Program offer tiers */
 .offer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:1.5rem}
 .offer-card{background:var(--white);border:1px solid rgba(7,37,42,0.1);border-radius:var(--radius-md);padding:1.5rem;box-shadow:0 2px 10px rgba(7,37,42,0.06);display:flex;flex-direction:column}
@@ -222,6 +248,51 @@ section h3{margin-top:0;margin-bottom:1.5rem;color:var(--navy)}
 .offer-price{font-weight:700;color:var(--dark);margin:0.5rem 0}
 .offer-price.tbd{color:var(--muted);font-weight:600;font-style:italic}
 .offer-card .btn{margin-top:0.75rem;align-self:flex-start}
+
+/* Programs — the ridge/path layout: a spine with alternating nodes.
+   Not numbered — these five programs are parallel, not sequential;
+   the spine reuses the hero's path language without implying an order. */
+.path-rail{position:relative;margin-top:1rem}
+.path-rail::before{content:'';position:absolute;left:24px;top:6px;bottom:6px;width:3px;background:linear-gradient(var(--cyan),var(--green));border-radius:2px}
+.program-node{position:relative;padding-left:64px;margin-bottom:2.25rem}
+.program-node:last-child{margin-bottom:0}
+.program-node::before{content:'';position:absolute;left:15px;top:28px;width:18px;height:18px;border-radius:50%;background:var(--white);border:4px solid var(--cyan);z-index:1;transition:border-color 0.3s ease}
+.program-card{background:var(--white);border-radius:var(--radius-lg);padding:1.75rem;box-shadow:0 2px 10px rgba(7,37,42,0.06);transition:opacity 0.3s ease,filter 0.3s ease,transform 0.3s ease,box-shadow 0.3s ease}
+.program-card:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(7,37,42,0.12)}
+.program-card img{width:72px;height:72px;object-fit:cover;border-radius:var(--radius-sm);margin-bottom:1rem}
+.program-card h3{font-size:var(--step1);margin-bottom:0.5rem}
+.program-card p{color:var(--muted);margin-bottom:1.1rem}
+@media (min-width:900px){
+  .path-rail::before{left:50%;transform:translateX(-1.5px)}
+  .program-node{width:calc(50% - 36px);padding-left:0}
+  .program-node::before{left:auto}
+  .program-node:nth-child(odd){margin-right:auto}
+  .program-node:nth-child(odd) .program-card{margin-right:36px}
+  .program-node:nth-child(odd)::before{right:-45px}
+  .program-node:nth-child(even){margin-left:auto}
+  .program-node:nth-child(even) .program-card{margin-left:36px}
+  .program-node:nth-child(even)::before{left:-45px}
+}
+
+/* Impact — same dot motif as Core Values, laid out as a wrapping chain */
+.impact-chain{display:flex;flex-wrap:wrap;gap:2rem;list-style:none;margin:0;padding:0}
+.impact-chain li{flex:1 1 190px;padding-left:1.9rem;position:relative}
+.impact-chain .chain-dot{background:var(--green);box-shadow:0 0 0 4px rgba(15,122,64,0.14)}
+.impact-chain h3{font-size:var(--step1);margin-bottom:0.35rem}
+.impact-chain p{color:var(--muted);margin:0}
+
+/* Segment filter — once a visitor picks a path, de-emphasize the rest
+   rather than hiding it, so nothing disappears if JS behaves oddly. */
+body[data-active-segment] .program-node,
+body[data-active-segment] .involved-item{opacity:0.4;filter:grayscale(0.4);transition:opacity 0.3s ease,filter 0.3s ease}
+body[data-active-segment="individual"] .program-node[data-segment~="individual"],
+body[data-active-segment="individual"] .involved-item[data-segment~="individual"],
+body[data-active-segment="org"] .program-node[data-segment~="org"],
+body[data-active-segment="org"] .involved-item[data-segment~="org"],
+body[data-active-segment="donor"] .program-node[data-segment~="donor"],
+body[data-active-segment="donor"] .involved-item[data-segment~="donor"]{
+  opacity:1;filter:none
+}
 @media (max-width:800px){
   .footer-grid{grid-template-columns:1fr;gap:2rem}
   .footer-content{padding:2rem 0 1.5rem}
