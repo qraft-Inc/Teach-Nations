@@ -34,26 +34,48 @@
   }
   </script>
   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
     <div class="container">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770383996/new_teachnations_logo_eaxqms.png" alt="Teach Nations" class="logo-img" />
-        <span>Bible School on Wheels</span>
-      </div>
-      <nav>
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+      <nav class="nav-menu">
         <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="lms.html">LMS</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li class="dropdown">
+            <a href="index.html#focus" class="dropdown-toggle">Programs</a>
+            <ul class="dropdown-menu">
+              <li><a href="bible-school-on-wheels.html">Bible School on Wheels</a></li>
+              <li><a href="flourish.html">Flourish</a></li>
+              <li><a href="marksman.html">Marksman</a></li>
+              <li><a href="transformers.html">Transformers</a></li>
+              <li><a href="leadership-development.html">Leadership &amp; Professional Development</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#get-involved">Get Involved</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a class="btn" href="https://bibleschool.teachnations.org/" target="_blank" rel="noopener">LMS</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main id="main" class="container">
     <section class="card">
       <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763212454/bsow_cltwir.png" alt="Bible School on Wheels" style="margin-bottom:1rem;border-radius:8px;width:100%;height:auto;object-fit:cover;max-height:400px" />
       <h2>About Bible School on Wheels</h2>
@@ -229,6 +251,36 @@
       </div>
     </section>
 
+    <section id="enrollment" class="card">
+      <h3>Enrollment Options</h3>
+      <div class="offer-grid">
+        <div class="offer-card">
+          <h4>Individual Cohort Seat</h4>
+          <p>Join a Bible School on Wheels cohort as an individual student.</p>
+          <p class="offer-price tbd">Pricing: contact us</p>
+          <a class="btn" href="https://staffweb.zoom.us/meeting/register/6kaV9FS2TtiAs-y40G1Pnw" target="_blank" rel="noopener">Register</a>
+        </div>
+        <div class="offer-card">
+          <h4>Church Hosts a Cohort</h4>
+          <p>Bring a Bible School on Wheels cohort to your church for a group of students.</p>
+          <p class="offer-price tbd">Pricing: contact us</p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="offer-card">
+          <h4>Sponsor-a-Student</h4>
+          <p>Sponsor a student's place in Bible School on Wheels.</p>
+          <p class="offer-price tbd">Pricing: contact us</p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="offer-card">
+          <h4>Advanced Leadership Residency</h4>
+          <p>An advanced leadership residency, and an annual curriculum license for schools and denominations.</p>
+          <p class="offer-price tbd">Pricing: contact us</p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
     <section id="contact" class="card contact">
       <h3>Contact</h3>
       <p>Email: <a href="mailto:info@teachnations.org">info@teachnations.org</a></p>
@@ -241,28 +293,23 @@
         <div class="footer-grid">
           <div class="footer-section">
             <div class="footer-logo">
-              <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770385367/teachnations_white_vsml84.jpg" alt="Teach Nations" class="footer-logo-img" />
-              <h4>Teach Nations</h4>
+              <svg class="brand-mark on-dark" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle class="mark-dots" cx="38" cy="16" r="11"/>
+                <circle class="mark-dots" cx="82" cy="16" r="11"/>
+                <path class="mark-path" d="M6 78 L36 32 L60 62 L84 32 L114 78" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Teach Nations
             </div>
-            <p>Transforming nations through discipleship, leadership training and career development.</p>
-          </div>
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="bible-school-on-wheels.html">Bible School Courses</a></li>
-              <li><a href="schools-discipleship.html">Schools Programs</a></li>
-              <li><a href="community-development.html">Community Programs</a></li>
-            </ul>
+            <p>Making Disciples. Equipping Leaders. Creating Generational Impact.</p>
           </div>
           <div class="footer-section">
             <h4>Programs</h4>
             <ul class="footer-links">
               <li><a href="bible-school-on-wheels.html">Bible School on Wheels</a></li>
-              <li><a href="mission-trips.html">Mission Trips</a></li>
-              <li><a href="conferences.html">Conferences</a></li>
-              <li><a href="our-story.html">Our Story</a></li>
-              <li><a href="https://staffweb.zoom.us/meeting/register/6kaV9FS2TtiAs-y40G1Pnw" target="_blank" rel="noopener">Register</a></li>
+              <li><a href="flourish.html">Flourish</a></li>
+              <li><a href="marksman.html">Marksman</a></li>
+              <li><a href="transformers.html">Transformers</a></li>
+              <li><a href="leadership-development.html">Leadership &amp; Professional Development</a></li>
             </ul>
           </div>
           <div class="footer-section">
@@ -279,7 +326,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; 2026 Teach Nations. All rights reserved.</p>
-        <p class="footer-tagline">Built with ❤️ for mission-focused learning</p>
+        <p class="footer-tagline">MAKE · EQUIP · MULTIPLY</p>
       </div>
     </div>
   </footer>

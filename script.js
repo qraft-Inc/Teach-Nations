@@ -60,22 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Navbar scroll effect
   const header = document.querySelector('.site-header');
-  const heroCarousel = document.querySelector('.hero-carousel');
-  
+
   window.addEventListener('scroll', function() {
-    const scrolled = window.scrollY;
-    
-    // Add shadow to navbar on scroll
-    if (scrolled > 50) {
+    if (window.scrollY > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
-    }
-    
-    // Parallax effect on hero
-    if (heroCarousel && scrolled < window.innerHeight) {
-      const parallaxSpeed = 0.5;
-      heroCarousel.style.transform = `translateY(${scrolled * parallaxSpeed}px)`;
     }
   });
 
@@ -99,70 +89,22 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(section);
   });
 
-  // Hero Carousel
-  const carousel = document.querySelector('.carousel-container');
-  if (carousel) {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.dot');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    let currentSlide = 0;
-    let autoplayInterval;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        dots[i].classList.remove('active');
-      });
-      
-      currentSlide = (index + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
-    }
-
-    function nextSlide() {
-      showSlide(currentSlide + 1);
-    }
-
-    function prevSlide() {
-      showSlide(currentSlide - 1);
-    }
-
-    function startAutoplay() {
-      autoplayInterval = setInterval(nextSlide, 5000);
-    }
-
-    function stopAutoplay() {
-      clearInterval(autoplayInterval);
-    }
-
-    // Event listeners
-    if (nextBtn) nextBtn.addEventListener('click', () => {
-      nextSlide();
-      stopAutoplay();
-      startAutoplay();
-    });
-
-    if (prevBtn) prevBtn.addEventListener('click', () => {
-      prevSlide();
-      stopAutoplay();
-      startAutoplay();
-    });
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        showSlide(index);
-        stopAutoplay();
-        startAutoplay();
+  // Segmented visitor entry — highlights which audience is active.
+  // Later stages tag Programs/Offers content with data-segment so this
+  // actually filters that content; for now it just tracks the choice.
+  const segmentBtns = document.querySelectorAll('.segment-btn');
+  if (segmentBtns.length) {
+    segmentBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        segmentBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-selected', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        document.body.setAttribute('data-active-segment', btn.dataset.segment);
       });
     });
-
-    // Pause on hover
-    carousel.addEventListener('mouseenter', stopAutoplay);
-    carousel.addEventListener('mouseleave', startAutoplay);
-
-    // Start autoplay
-    startAutoplay();
   }
 
   // Smooth scroll to section if hash is present in URL

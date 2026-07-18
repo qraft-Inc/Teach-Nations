@@ -69,20 +69,22 @@
   }
   </script>
   
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/favicon_io/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&family=Space+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header" role="banner">
     <div class="container">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770383996/new_teachnations_logo_eaxqms.png" alt="Teach Nations" class="logo-img" />
-     
-      </div>
+      </a>
       <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
@@ -92,103 +94,171 @@
         <ul class="nav-list">
           <li><a href="#about">About</a></li>
           <li class="dropdown">
-            <a href="./bible-school-on-wheels.html" class="dropdown-toggle">Bible School Courses</a>
+            <a href="#focus" class="dropdown-toggle">Programs</a>
             <ul class="dropdown-menu">
-              <li><a href="./bible-school-on-wheels.html#bsow-1"><span class="dropdown-icon icon-bsow-1" aria-hidden="true"></span>Bible School On Wheels 1</a></li>
-              <li><a href="./bible-school-on-wheels.html#bsow-2"><span class="dropdown-icon icon-bsow-2" aria-hidden="true"></span>Bible School On Wheels 2</a></li>
-              <li><a href="./bible-school-on-wheels.html#bsow-3"><span class="dropdown-icon icon-bsow-3" aria-hidden="true"></span>Bible School On Wheels 3</a></li>
+              <li><a href="bible-school-on-wheels.html">Bible School on Wheels</a></li>
+              <li><a href="flourish.html">Flourish</a></li>
+              <li><a href="marksman.html">Marksman</a></li>
+              <li><a href="transformers.html">Transformers</a></li>
+              <li><a href="leadership-development.html">Leadership &amp; Professional Development</a></li>
             </ul>
           </li>
-          <li><a href="conferences.html">Conferences</a></li>
-          <li><a href="mission-trips.html">Mission Trips</a></li>
-          <li><a href="schools-discipleship.html">Schools Programs</a></li>
-          <li><a href="our-story.html">Our Story</a></li>
+          <li><a href="#get-involved">Get Involved</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://bibleschool.teachnations.org/">LMS</a></li>
+          <li><a class="btn" href="https://bibleschool.teachnations.org/" target="_blank" rel="noopener">LMS</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="hero-carousel">
-    <div class="carousel-container">
-      <!-- Slide 1 -->
-      <div class="carousel-slide active">
-        <div class="container">
-          <h2>Transforming nations through discipleship, leadership training and career development</h2>
-          <p>Bible School Courses • Conferences • Community programs</p>
-          <div class="cta-row">
-            <a class="btn primary" href="bible-school-on-wheels.html">Explore Courses</a>
-            <a class="btn" href="conferences.html">Upcoming Conferences</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="carousel-slide" style="background-image:linear-gradient(rgba(7,37,42,0.8),rgba(11,184,238,0.75)),url('https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763211361/bsow_banner_iullqw.jpg')">
-        <div class="container">
-          <h2>Bible School on Wheels</h2>
-          <p>3-Year Program • 25+ Courses • Transform Your Life</p>
-          <div class="cta-row">
-            <a class="btn primary" href="bible-school-on-wheels.html">View Courses</a>
-            <a class="btn" href="https://staffweb.zoom.us/meeting/register/6kaV9FS2TtiAs-y40G1Pnw" target="_blank" rel="noopener">Register Now</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 3 -->
-      <div class="carousel-slide" style="background-image:linear-gradient(rgba(7,37,42,0.8),rgba(11,184,238,0.75)),url('https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763724833/MAIN_TEN_UGANDA_PIC_FOR_GRADUATION_2024_aemu3d.jpg')">
-        <div class="container">
-          <h2>Graduation Ceremony 2026</h2>
-          <p>November 21 • Kampala</p>
-          <div class="cta-row">
-            <a class="btn primary" href="conferences.html">View Details</a>
-            <a class="btn" href="conferences.html">RSVP Now</a>
-          </div>
-        </div>
-      </div>
-      
+  <div class="announce-bar">
+    <div class="container">
+      <p><strong>🎓 Graduation Ceremony 2026</strong> — Saturday, November 21 · Kampala. <a href="#contact">RSVP</a></p>
     </div>
-    
-    <!-- Navigation buttons -->
-    <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
-    <button class="carousel-btn next" aria-label="Next slide">›</button>
-    
-    <!-- Dots indicator -->
-    <div class="carousel-dots">
-      <button class="dot active" aria-label="Go to slide 1"></button>
-      <button class="dot" aria-label="Go to slide 2"></button>
-      <button class="dot" aria-label="Go to slide 3"></button>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Disciple → Leader → Nation</p>
+      <h1 class="hero-title">Making Disciples.<br>Equipping Leaders.<br>Creating Generational Impact.</h1>
+      <p class="hero-statement">We exist to raise Christ-centered disciples and transformational leaders who influence their families, communities, workplaces, and nations for God's glory.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="bible-school-on-wheels.html">Apply for Bible School</a>
+        <a class="btn" href="#focus">Explore Our Programs</a>
+        <a class="btn" href="#get-involved">Join the Mission</a>
+      </div>
+
+      <div class="hero-path" aria-hidden="true">
+        <svg viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
+          <path class="path-line" d="M50,120 H230 L330,70 H430 L530,25 H650"/>
+          <circle class="path-node n1" cx="140" cy="120" r="9"/>
+          <circle class="path-node n2" cx="380" cy="70" r="9"/>
+          <circle class="path-node n3" cx="590" cy="25" r="9"/>
+        </svg>
+        <div class="path-labels">
+          <span>Disciple</span>
+          <span>Leader</span>
+          <span>Multiplier</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="segment-select" aria-label="Find your path">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;display:block;margin-bottom:0.85rem">Find your path</p>
+      <div class="segment-toggle" role="tablist" aria-label="I am a...">
+        <button type="button" class="segment-btn active" role="tab" aria-selected="true" data-segment="individual">Individuals</button>
+        <button type="button" class="segment-btn" role="tab" aria-selected="false" data-segment="org">Churches, Schools &amp; Organizations</button>
+        <button type="button" class="segment-btn" role="tab" aria-selected="false" data-segment="donor">Donors &amp; Sponsors</button>
+      </div>
     </div>
   </section>
 
   <main id="main" class="container" role="main">
     <section id="about" class="card parallax-section" data-speed="0.5">
       <h3>About Teach Nations</h3>
-      <p>Teach Nations is an independent Christ-centered organization dedicated to discipleship, career development, and leadership training for emerging and established leaders across the world. <strong>We partner with Teach Every Nation to deliver their biblically grounded courses, including the Bible School on Wheels program</strong>, alongside our own community development initiatives.</p>
-      <p>Our mission is to raise a generation of believers who are spiritually grounded, professionally competent, and socially responsible leaders who transform their communities through knowledge, integrity, and service.</p>
+      <p>Teach Nations is a Christian discipleship and leadership movement committed to developing individuals who live out biblical truth and lead with integrity, purpose, and excellence through biblical education, leadership development, professional training, community outreach, and mission engagement.</p>
+      <p>Our Bible School on Wheels program is delivered <strong>in partnership with Teach Every Nation</strong>, alongside our own Flourish, Marksman, Transformers, and Leadership &amp; Professional Development programs across Uganda and East Africa.</p>
+    </section>
+
+    <section id="mission-vision" class="card parallax-section" data-speed="0.4">
+      <h3>Mission &amp; Vision</h3>
+      <p><strong>Mission:</strong> To make disciples, equip leaders, and transform communities through biblical education, leadership development, and intentional discipleship.</p>
+      <p><strong>Vision:</strong> To see generations of Christ-centered leaders transforming nations.</p>
+      <h4>Core Values</h4>
+      <ul class="values-grid">
+        <li class="value-chip">Biblical Truth</li>
+        <li class="value-chip">Discipleship</li>
+        <li class="value-chip">Leadership</li>
+        <li class="value-chip">Excellence</li>
+        <li class="value-chip">Integrity</li>
+        <li class="value-chip">Family</li>
+        <li class="value-chip">Service</li>
+        <li class="value-chip">Multiplication</li>
+      </ul>
     </section>
 
     <section id="focus" class="card parallax-section" data-speed="0.3">
-      <h3>Our Focus Areas</h3>
+      <h3>Our Programs</h3>
       <div class="grid">
         <div class="card course">
           <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763724833/MAIN_TEN_UGANDA_PIC_FOR_GRADUATION_2024_aemu3d.jpg" alt="Bible School on Wheels" />
-          <h4>Bible School on Wheels (BSOW)</h4>
-          <p><strong>Partnering with Teach Every Nation</strong>, our foundational discipleship and leadership training platform offers a structured pathway through biblically grounded courses delivered online and in local communities.</p>
+          <h4>Bible School on Wheels</h4>
+          <p><strong>In partnership with Teach Every Nation</strong>, our foundational discipleship and leadership training platform offering Bible-based courses, leadership development, personal discipleship, and ministry training, delivered online and in local communities.</p>
           <a class="btn" href="bible-school-on-wheels.html">Read more</a>
         </div>
         <div class="card course">
-          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763725295/Forgiveness_course_at_Gayaza_high_1_psmwlq.jpg" alt="Schools Discipleship Programs" />
-          <h4>Schools Discipleship Programs</h4>
-          <p>Shaping the next generation through faith-based education and mentorship in partnership with organizations like Scripture Union across multiple countries.</p>
-          <a class="btn" href="schools-discipleship.html">Read more</a>
+          <img src="assets/course-placeholder.svg" alt="Flourish" />
+          <h4>Flourish</h4>
+          <p>Teach Nations' women's discipleship program.</p>
+          <a class="btn" href="flourish.html">Read more</a>
         </div>
         <div class="card course">
-          <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1763725385/Aerobics_in_Kyebando_uio5ve.jpg" alt="Community Development Programs" />
-          <h4>Community Development Programs</h4>
-          <p>Demonstrating faith through action with educational support, health care, support for vulnerable mothers, and livelihood projects.</p>
-          <a class="btn" href="community-development.html">Read more</a>
+          <img src="assets/course-placeholder.svg" alt="Marksman" />
+          <h4>Marksman</h4>
+          <p>Teach Nations' men's discipleship program.</p>
+          <a class="btn" href="marksman.html">Read more</a>
+        </div>
+        <div class="card course">
+          <img src="assets/course-placeholder.svg" alt="Transformers" />
+          <h4>Transformers</h4>
+          <p>Teach Nations' youth discipleship and leadership program.</p>
+          <a class="btn" href="transformers.html">Read more</a>
+        </div>
+        <div class="card course">
+          <img src="assets/course-placeholder.svg" alt="Leadership & Professional Development" />
+          <h4>Leadership &amp; Professional Development</h4>
+          <p>Training in leadership, communication, productivity, purpose discovery, career development, entrepreneurship, financial stewardship, family and parenting, and workplace excellence — for churches, schools, organizations, businesses, and individuals.</p>
+          <a class="btn" href="leadership-development.html">Read more</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="card parallax-section" data-speed="0.35">
+      <h3>Our Impact</h3>
+      <div class="grid">
+        <div class="card course"><h4>Raise Disciples</h4><p>Forming Christ-centered disciples grounded in biblical truth.</p></div>
+        <div class="card course"><h4>Equip Pastors &amp; Leaders</h4><p>Training pastors and leaders for effective, biblically grounded ministry.</p></div>
+        <div class="card course"><h4>Develop Youth</h4><p>Raising up the next generation through discipleship and leadership formation.</p></div>
+        <div class="card course"><h4>Strengthen Families</h4><p>Equipping families to live out biblical values at home.</p></div>
+        <div class="card course"><h4>Partner with Churches &amp; Schools</h4><p>Working alongside churches and schools to extend discipleship and leadership training.</p></div>
+        <div class="card course"><h4>Mobilize Mission Teams</h4><p>Sending and hosting mission teams for evangelism and community outreach.</p></div>
+      </div>
+    </section>
+
+    <section id="get-involved" class="card parallax-section" data-speed="0.3">
+      <h3>Get Involved</h3>
+      <div class="involved-grid">
+        <div class="involved-item">
+          <h4>Study at Bible School</h4>
+          <p>Enroll in Bible School on Wheels and grow as a disciple and leader.</p>
+          <a class="btn" href="bible-school-on-wheels.html">Apply Now</a>
+        </div>
+        <div class="involved-item">
+          <h4>Volunteer</h4>
+          <p>Serve alongside our team in ministry and community programs.</p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="involved-item">
+          <h4>Partner</h4>
+          <p>Partner your church, school, or organization with Teach Nations.</p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="involved-item">
+          <h4>Sponsor a Student</h4>
+          <p>Help make discipleship and leadership training accessible to more students.</p>
+          <a class="btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="involved-item">
+          <h4>Attend Events</h4>
+          <p>Join our intakes and other upcoming events.</p>
+          <a class="btn" href="#register">See Events</a>
+        </div>
+        <div class="involved-item">
+          <h4>Invite Us to Train Your Organization</h4>
+          <p>Bring leadership and professional development training to your church, school, or business.</p>
+          <a class="btn" href="leadership-development.html">Learn More</a>
         </div>
       </div>
     </section>
@@ -227,7 +297,10 @@
 
     <section id="contact" class="card contact">
       <h3>Contact</h3>
+      <p><strong>Teach Nations</strong></p>
+      <p>Making Disciples. Equipping Leaders. Creating Generational Impact.</p>
       <p>Email: <a href="mailto:info@teachnations.org">info@teachnations.org</a></p>
+      <p>Website: <a href="https://teachnations.org">www.teachnations.org</a></p>
       <p>Address: Teach Nations, Bukoto Kampala</p>
     </section>
   </main>
@@ -238,28 +311,23 @@
         <div class="footer-grid">
           <div class="footer-section">
             <div class="footer-logo">
-              <img src="https://res.cloudinary.com/dcvvxtq8f/image/upload/v1770385367/teachnations_white_vsml84.jpg" alt="Teach Nations" class="footer-logo-img" />
-              <h4>Teach Nations</h4>
+              <svg class="brand-mark on-dark" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle class="mark-dots" cx="38" cy="16" r="11"/>
+                <circle class="mark-dots" cx="82" cy="16" r="11"/>
+                <path class="mark-path" d="M6 78 L36 32 L60 62 L84 32 L114 78" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Teach Nations
             </div>
-            <p>Transforming nations through discipleship, leadership training and career development.</p>
-          </div>
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="bible-school-on-wheels.html">Bible School Courses</a></li>
-              <li><a href="schools-discipleship.html">Schools Programs</a></li>
-              <li><a href="community-development.html">Community Programs</a></li>
-            </ul>
+            <p>Making Disciples. Equipping Leaders. Creating Generational Impact.</p>
           </div>
           <div class="footer-section">
             <h4>Programs</h4>
             <ul class="footer-links">
               <li><a href="bible-school-on-wheels.html">Bible School on Wheels</a></li>
-              <li><a href="mission-trips.html">Mission Trips</a></li>
-              <li><a href="conferences.html">Conferences</a></li>
-              <li><a href="our-story.html">Our Story</a></li>
-              <li><a href="https://staffweb.zoom.us/meeting/register/6kaV9FS2TtiAs-y40G1Pnw" target="_blank" rel="noopener">Register</a></li>
+              <li><a href="flourish.html">Flourish</a></li>
+              <li><a href="marksman.html">Marksman</a></li>
+              <li><a href="transformers.html">Transformers</a></li>
+              <li><a href="leadership-development.html">Leadership &amp; Professional Development</a></li>
             </ul>
           </div>
           <div class="footer-section">
@@ -276,7 +344,7 @@
     <div class="footer-bottom">
       <div class="container">
         <p>&copy; 2026 Teach Nations. All rights reserved.</p>
-        <p class="footer-tagline">Built with ❤️ for mission-focused learning</p>
+        <p class="footer-tagline">MAKE · EQUIP · MULTIPLY</p>
       </div>
     </div>
   </footer>
